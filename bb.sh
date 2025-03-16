@@ -24,7 +24,7 @@ global_variables() {
     # The typical subtitle for each blog
     global_description="research & development"
     # The public base URL for this blog
-    global_url="https://aeniks.github.io/popo"
+    global_url="https://leonel.pages.dev"
 
     # Your name
     global_author="leonel"
