@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
-<channel><title>My fancy blog</title><link>https://qq.ftp.sh//index.html</link>
-<description>A blog about turtles and carrots</description><language>en</language>
-<lastBuildDate>Sun, 16 Mar 2025 22:27:53 +0100</lastBuildDate>
-<pubDate>Sun, 16 Mar 2025 22:27:53 +0100</pubDate>
-<atom:link href="https://qq.ftp.sh//feed.rss" rel="self" type="application/rss+xml" />
+<channel><title>updates</title><link>https://aeniks.github.io/popo/index.html</link>
+<description>research & development</description><language>en</language>
+<lastBuildDate>Sun, 16 Mar 2025 23:04:11 +0100</lastBuildDate>
+<pubDate>Sun, 16 Mar 2025 23:04:11 +0100</pubDate>
+<atom:link href="https://aeniks.github.io/popo/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+qqq
+</title><description><![CDATA[
+q
+
+q
+q
+qTitle on this line
+\# ssssss
+<pre>aaaaaa</pre>
+<hr>
+]]></description><link>https://aeniks.github.io/popo/qqq.html</link>
+<guid>https://aeniks.github.io/popo/./qqq.html</guid>
+<dc:creator>leonel</dc:creator>
+<pubDate>Sun, 16 Mar 2025 23:03:58 +0100</pubDate></item>
 <item><title>
 222
 </title><description><![CDATA[
@@ -23,9 +38,10 @@ Title on this line
 as you exit your editor.</p>
 
 <p>Tags: <a href='tag_keep-this-tag-format.html'>keep-this-tag-format</a>, <a href='tag_tags-are-optional.html'>tags-are-optional</a>, <a href='tag_example.html'>example</a></p>
+
 <!-- text end -->
-]]></description><link>https://qq.ftp.sh//29020.html</link>
-<guid>https://qq.ftp.sh//./29020.html</guid>
+]]></description><link>https://aeniks.github.io/popo/29020.html</link>
+<guid>https://aeniks.github.io/popo/./29020.html</guid>
 <dc:creator>lenoenel</dc:creator>
 <pubDate>Sun, 16 Mar 2025 22:27:48 +0100</pubDate></item>
 <item><title>
@@ -43,9 +59,10 @@ as you exit your editor.</p>
 <code>xxxxxxxx</code>
 
 
+
 <!-- text end -->
-]]></description><link>https://qq.ftp.sh//18650.html</link>
-<guid>https://qq.ftp.sh//./18650.html</guid>
+]]></description><link>https://aeniks.github.io/popo/18650.html</link>
+<guid>https://aeniks.github.io/popo/./18650.html</guid>
 <dc:creator>lenoenel</dc:creator>
 <pubDate>Sun, 16 Mar 2025 22:13:00 +0100</pubDate></item>
 </channel></rss>

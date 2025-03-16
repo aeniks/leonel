@@ -20,14 +20,14 @@ global_variables() {
     global_software_version="2.10"
 
     # Blog title
-    global_title="My fancy blog"
+    global_title="updates"
     # The typical subtitle for each blog
-    global_description="A blog about turtles and carrots"
+    global_description="research & development"
     # The public base URL for this blog
     global_url="https://aeniks.github.io/popo"
 
     # Your name
-    global_author="lenoenel"
+    global_author="leonel"
     # You can use twitter or facebook or anything for global_author_url
     global_author_url="https://aeniks.github.io" 
     # Your email
@@ -55,7 +55,7 @@ global_variables() {
     # is just a link.
     global_twitter_cookieless="true"
     # Default search page, where tweets more than a week old are hidden
-    global_twitter_search="twitter"
+    global_twitter_search=""
     # Change this to your disqus username to use disqus for comments
     global_disqus_username=""
 
@@ -968,7 +968,6 @@ create_includes() {
         protected_mail=${global_email//@/&#64;}
         protected_mail=${protected_mail//./&#46;}
         echo "<div id=\"footer\">$global_license <a href=\"$global_author_url\">$global_author</a> &mdash; <a href=\"mailto:$protected_mail\">$protected_mail</a><br/>"
-        echo 'Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>'
         } >> ".footer.html"
     fi
 }
@@ -1006,7 +1005,7 @@ create_css() {
     if [[ -f ../style.css ]] && [[ ! -f main.css ]]; then
         ln -s "../style.css" "main.css" 
     elif [[ ! -f main.css ]]; then
-        echo 'body{font-family:Georgia,"Times New Roman",Times,serif;margin:0;padding:0;background-color:#F3F3F3;}
+        echo 'body{font-family:monospace;margin:0;padding:0;background-color:#fbfbfb;}
         #divbodyholder{padding:5px;background-color:#DDD;width:100%;max-width:874px;margin:24px auto;}
         #divbody{border:solid 1px #ccc;background-color:#fff;padding:0px 48px 24px 48px;top:0;}
         .headerholder{background-color:#f9f9f9;border-top:solid 1px #ccc;border-left:solid 1px #ccc;border-right:solid 1px #ccc;}
