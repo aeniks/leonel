@@ -461,12 +461,12 @@ create_html_page() {
         # one blog entry
         if [[ $index == no ]]; then
             echo '<!-- entry begin -->' # marks the beginning of the whole post
-            echo "<h3><a class=\"ablack\" href=\"$file_url\">"
+            echo "<h2><a class=\"ablack\" href=\"$file_url\">"
             # remove possible <p>'s on the title because of markdown conversion
             title=${title//<p>/}
             title=${title//<\/p>/}
             echo "$title"
-            echo '</a></h3>'
+            echo '</a></h2>'
             if [[ -z $timestamp ]]; then
                 echo "<!-- $date_inpost: #$(LC_ALL=$date_locale date +"$date_format_timestamp")# -->"
             else
@@ -487,7 +487,7 @@ create_html_page() {
 
             twitter "$global_url/$file_url"
 
-            echo '<!-- entry end -->' # absolute end of the post
+            echo '<hr class="posthr"></hr><!-- entry end -->' # absolute end of the post
         fi
 
         echo '</div>' # content
@@ -662,7 +662,7 @@ all_posts() {
     done
 
     {
-        echo "<h3>$template_archive_title</h3>"
+        echo "<h4>$template_archive_title</h4>"
         prev_month=""
         while IFS='' read -r i; do
             is_boilerplate_file "$i" && continue
@@ -702,7 +702,7 @@ all_tags() {
     done
 
     {
-        echo "<h3>$template_tags_title</h3>"
+        echo "<h34>$template_tags_title</h4>"
         echo "<ul>"
         for i in $prefix_tags*.html; do
             [[ -f "$i" ]] || break
