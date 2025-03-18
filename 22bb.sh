@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/data/data/com.termux/files/usr/bin/env bash
 
 # BashBlog, a simple blog system written in a single bash script
 # (C) Carlos Fenollosa <carlos.fenollosa@gmail.com>, 2011-2016 and contributors
@@ -20,18 +20,18 @@ global_variables() {
     global_software_version="2.10"
 
     # Blog title
-    global_title="aa"
+    global_title="updates"
     # The typical subtitle for each blog
     global_description="research & development"
     # The public base URL for this blog
     global_url="https://leonel.pages.dev"
 
     # Your name
-    global_author="aa"
+    global_author="leonel"
     # You can use twitter or facebook or anything for global_author_url
-    global_author_url="" 
+    global_author_url="https://aeniks.github.io" 
     # Your email
-    global_email=""
+    global_email="hello@aeniks.com"
 
     # CC by-nc-nd is a good starting point, you can change this to "&copy;" for Copyright
     global_license="CC by-nc-nd"
@@ -56,9 +56,9 @@ global_variables() {
     global_twitter_cookieless="true"
     # Default search page, where tweets more than a week old are hidden
     global_twitter_search=""
-
     # Change this to your disqus username to use disqus for comments
     global_disqus_username=""
+
 
 
     # Blog generated files
@@ -440,7 +440,11 @@ create_html_page() {
     # html, head
     {
         cat ".header.html"
-        echo "<title>$title</title>"
+        echo "
+
+
+
+        <title>$title</title>"
         google_analytics
         twitter_card "$content" "$title"
         echo "</head><body>"
@@ -461,12 +465,12 @@ create_html_page() {
         # one blog entry
         if [[ $index == no ]]; then
             echo '<!-- entry begin -->' # marks the beginning of the whole post
-            echo "<h3><a class=\"ablack\" href=\"$file_url\">"
+            echo "<h2><a class=\"ablack\" href=\"$file_url\">"
             # remove possible <p>'s on the title because of markdown conversion
             title=${title//<p>/}
             title=${title//<\/p>/}
             echo "$title"
-            echo '</a></h3>'
+            echo '</a></h2>'
             if [[ -z $timestamp ]]; then
                 echo "<!-- $date_inpost: #$(LC_ALL=$date_locale date +"$date_format_timestamp")# -->"
             else
@@ -487,7 +491,7 @@ create_html_page() {
 
             twitter "$global_url/$file_url"
 
-            echo '<!-- entry end -->' # absolute end of the post
+            echo '<hr class="posthr"></hr><!-- entry end -->' # absolute end of the post
         fi
 
         echo '</div>' # content
@@ -501,9 +505,8 @@ create_html_page() {
         echo '</div></div>' # divbody and divbodyholder 
         disqus_footer
         [[ -n $body_end_file ]] && cat "$body_end_file"
-        echo '</body></html>'
-    } > "$filename"
-}
+        echo '    <script src="spotlight.bundle.js" defer></script>
+            </body></html>'>"$filename"
 
 # Parse the plain text file into an html file
 #
@@ -620,7 +623,7 @@ EOF
         echo "To preview the entry, open $preview_url/$filename in your browser"
 
         echo -n "[P]ost this entry, [E]dit again, [D]raft for later? (p/E/d) "
-        read -r post_status
+        read -n1 -r post_status
         if [[ $post_status == d || $post_status == D ]]; then
             mkdir -p "drafts/"
             chmod 700 "drafts/"
@@ -662,7 +665,7 @@ all_posts() {
     done
 
     {
-        echo "<h3>$template_archive_title</h3>"
+        echo "<h4>$template_archive_title</h4>"
         prev_month=""
         while IFS='' read -r i; do
             is_boilerplate_file "$i" && continue
@@ -702,7 +705,7 @@ all_tags() {
     done
 
     {
-        echo "<h3>$template_tags_title</h3>"
+        echo "<h4>$template_tags_title</h4>"
         echo "<ul>"
         for i in $prefix_tags*.html; do
             [[ -f "$i" ]] || break
@@ -845,7 +848,7 @@ rebuild_tags() {
 #
 # $1 the html file
 get_post_title() {
-    awk '/<h3><a class="ablack" href=".+">/, /<\/a><\/h3>/{if (!/<h3><a class="ablack" href=".+">/ && !/<\/a><\/h3>/) print}' "$1"
+    awk '/<h2><a class="ablack" href=".+">/, /<\/a><\/h3>/{if (!/<h3><a class="ablack" href=".+">/ && !/<\/a><\/h2>/) print}' "$1"
 }
 
 # Return the post author
@@ -955,6 +958,7 @@ create_includes() {
         echo '<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />'
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
+        printf '<link rel="stylesheet" href="fancybox.css" type="text/css" />\n'
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"
         else 
@@ -968,10 +972,6 @@ create_includes() {
         protected_mail=${global_email//@/&#64;}
         protected_mail=${protected_mail//./&#46;}
         echo "<div id=\"footer\">$global_license <a href=\"$global_author_url\">$global_author</a> &mdash; <a href=\"mailto:$protected_mail\">$protected_mail</a><br/>"
-        echo '
-
-        </div>
-<script src="spotlight.bundle.js" defer></script>'
         } >> ".footer.html"
     fi
 }
@@ -1009,7 +1009,7 @@ create_css() {
     if [[ -f ../style.css ]] && [[ ! -f main.css ]]; then
         ln -s "../style.css" "main.css" 
     elif [[ ! -f main.css ]]; then
-        echo 'body{font-family:Georgia,"Times New Roman",Times,serif;margin:0;padding:0;background-color:#F3F3F3;}
+        echo 'body{font-family:monospace;margin:0;padding:0;background-color:#fbfbfb;}
         #divbodyholder{padding:5px;background-color:#DDD;width:100%;max-width:874px;margin:24px auto;}
         #divbody{border:solid 1px #ccc;background-color:#fff;padding:0px 48px 24px 48px;top:0;}
         .headerholder{background-color:#f9f9f9;border-top:solid 1px #ccc;border-left:solid 1px #ccc;border-right:solid 1px #ccc;}
@@ -1067,19 +1067,19 @@ usage() {
     echo "Usage: $0 command [filename]"
     echo ""
     echo "Commands:"
-    echo "    post [-html] [filename] insert a new blog post, or the filename of a draft to continue editing it"
-    echo "                            it tries to use markdown by default, and falls back to HTML if it's not available."
-    echo "                            use '-html' to override it and edit the post as HTML even when markdown is available"
-    echo "    edit [-n|-f] [filename] edit an already published .html or .md file. **NEVER** edit manually a published .html file,"
-    echo "                            always use this function as it keeps internal data and rebuilds the blog"
-    echo "                            use '-n' to give the file a new name, if title was changed"
-    echo "                            use '-f' to edit full html file, instead of just text part (also preserves name)"
-    echo "    delete [filename]       deletes the post and rebuilds the blog"
-    echo "    rebuild                 regenerates all the pages and posts, preserving the content of the entries"
-    echo "    reset                   deletes everything except this script. Use with a lot of caution and back up first!"
-    echo "    list                    list all posts"
-    echo "    tags [-n]               list all tags in alphabetical order"
-    echo "                            use '-n' to sort list by number of posts"
+    echo "post [-html] [filename] insert a new blog post, or the filename of a draft to continue editing it"
+    echo "                        it tries to use markdown by default, and falls back to HTML if it's not available."
+    echo "                        use '-html' to override it and edit the post as HTML even when markdown is available"
+    echo "edit [-n|-f] [filename] edit an already published .html or .md file. **NEVER** edit manually a published .html file,"
+    echo "                        always use this function as it keeps internal data and rebuilds the blog"
+    echo "                        use '-n' to give the file a new name, if title was changed"
+    echo "                        use '-f' to edit full html file, instead of just text part (also preserves name)"
+    echo "delete [filename]       deletes the post and rebuilds the blog"
+    echo "rebuild                 regenerates all the pages and posts, preserving the content of the entries"
+    echo "reset                   deletes everything except this script. Use with a lot of caution and back up first!"
+    echo "list                    list all posts"
+    echo "tags [-n]               list all tags in alphabetical order"
+    echo "                        use '-n' to sort list by number of posts"
     echo ""
     echo "For more information please open $0 in a code editor and read the header and comments"
 }
