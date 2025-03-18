@@ -440,7 +440,11 @@ create_html_page() {
     # html, head
     {
         cat ".header.html"
-        echo "<title>$title</title>"
+        echo "
+
+
+
+        <title>$title</title>"
         google_analytics
         twitter_card "$content" "$title"
         echo "</head><body>"
@@ -501,7 +505,27 @@ create_html_page() {
         echo '</div></div>' # divbody and divbodyholder 
         disqus_footer
         [[ -n $body_end_file ]] && cat "$body_end_file"
-        echo '</body></html>'
+        echo '
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+jQuery(document).ready(function($) {
+    // Apply to links to images.
+    $('a[href$=".webp"], a[href$=".jpeg"], a[href$=".png"], a[href$=".jpg"]').attr('rel','fancybox');
+    // Captions.
+    $('a[rel="fancybox"]').each(function(i) {
+        var caption = false;
+        caption_text = $(this).closest('.gallery-item').find('.wp-caption-text').text();
+        if (!caption && caption_text) caption = caption_text;
+        if (!caption)   caption = $(this).attr('title');
+        if (!caption)   caption = $(this).children('img:first').attr('title');
+        if (!caption)   caption = $(this).children('img:first').attr('alt');
+        if (caption)    $(this).attr('data-caption', caption);
+    });
+    // Group them so you can look prev/next.
+    $('a[rel="fancybox"]').attr('data-fancybox', 'view');
+    $("[data-fancybox]").fancybox({ loop: true });                                        });                                                                                       </script>
+<script src="fancybox.js" />
+        </body></html>'
     } > "$filename"
 }
 
@@ -620,7 +644,7 @@ EOF
         echo "To preview the entry, open $preview_url/$filename in your browser"
 
         echo -n "[P]ost this entry, [E]dit again, [D]raft for later? (p/E/d) "
-        read -r post_status
+        read -n1 -r post_status
         if [[ $post_status == d || $post_status == D ]]; then
             mkdir -p "drafts/"
             chmod 700 "drafts/"
@@ -955,6 +979,7 @@ create_includes() {
         echo '<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />'
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
+        printf '<link rel="stylesheet" href="fancybox.css" type="text/css" />\n'
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"
         else 
