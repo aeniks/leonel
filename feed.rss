@@ -2,9 +2,69 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>updates</title><link>https://leonel.pages.dev/index.html</link>
 <description>research & development</description><language>en</language>
-<lastBuildDate>Mon, 17 Mar 2025 00:15:29 +0100</lastBuildDate>
-<pubDate>Mon, 17 Mar 2025 00:15:29 +0100</pubDate>
+<lastBuildDate>Tue, 18 Mar 2025 11:43:36 +0100</lastBuildDate>
+<pubDate>Tue, 18 Mar 2025 11:43:36 +0100</pubDate>
 <atom:link href="https://leonel.pages.dev/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+</title><description><![CDATA[
+Title on this line
+
+<p>The rest of the text file is an <b>html</b> blog post. The process will continue as soon
+as you exit your editor.</p>
+
+<p>Tags: <a href='tag_hello.html'>hello</a>, <a href='tag_kk.html'>kk</a></p><hr>
+]]></description><link>https://leonel.pages.dev/12107.html</link>
+<guid>https://leonel.pages.dev/./12107.html</guid>
+<dc:creator>leonel</dc:creator>
+<pubDate>Tue, 18 Mar 2025 11:43:33 +0100</pubDate></item>
+<item><title>
+</title><description><![CDATA[
+          +hydNNNNdyh+
+        +mMMMMMMMMMMMMm+
+      `dMMm:NMMMMMMN:mMMd`
+      hMMMMMMMMMMMMMMMMMMh
+  ..  yyyyyyyyyyyyyyyyyyyy  ..
+.mMMm`MMMMMMMMMMMMMMMMMMMM`mMMm.
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+:MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM:
+-MMMM-MMMMMMMMMMMMMMMMMMMM-MMMM-
+ +yy+ MMMMMMMMMMMMMMMMMMMM +yy+
+      mMMMMMMMMMMMMMMMMMMm
+      `/++MMMMh++hMMMM++/`
+          MMMMo  oMMMM
+          MMMMo  oMMMM
+          oNMm-  -mMNs[1G[17A[36Cu0_a269@localhost
+[36C-----------------
+[36COS: Android REL 12 aarch64
+[36CHost: motorola moto g pro
+[36CKernel: Linux 4.14.190-perf+
+[36CUptime: 2 days, 20 hours, 59 mins
+[36CPackages: 348 (dpkg)
+[36CShell: bash 5.2.37
+[36CWM: Window Manager
+[36CTerminal: Termux 0.118.1
+[36CTerminal Font: UbuntuMono Nerd Font Mono
+[36CCPU: SM6125 (8) @ 2.02 GHz
+[36CGPU: Qualcomm Adreno (TM) 610 [Integrated]
+[36CMemory: 3.04 GiB / 3.58 GiB (85%)
+[36CSwap: 1.39 GiB / 2.50 GiB (56%)
+[36CDisk (/): 1.37 GiB / 1.38 GiB (100%) - ext4 [Read-only]
+[36CDisk (/storage/emulated): 104.73 GiB / 106.40 GiB (98%) - fuse
+[36CLocal IP (rmnet_data2): 10.100.84.209/30
+[36CLocal IP (wlan0): 192.168.220.106/24
+[36CBattery: 74% [Discharging]
+[36CLocale: en_US.UTF-8
+[36C
+[36C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[36C[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
+
+<!-- text end -->
+]]></description><link>https://leonel.pages.dev/28909.html</link>
+<guid>https://leonel.pages.dev/./28909.html</guid>
+<dc:creator>leonel</dc:creator>
+<pubDate>Tue, 18 Mar 2025 11:38:20 +0100</pubDate></item>
 <item><title>
 okokokok
 </title><description><![CDATA[
@@ -52,7 +112,45 @@ a
 ]]></description><link>https://leonel.pages.dev/okokokok.html</link>
 <guid>https://leonel.pages.dev/./okokokok.html</guid>
 <dc:creator>leonel</dc:creator>
-<pubDate>Mon, 17 Mar 2025 00:11:40 +0100</pubDate></item>
+<pubDate>Tue, 18 Mar 2025 10:32:12 +0100</pubDate></item>
+<item><title>
+qqq
+</title><description><![CDATA[
+q
+
+q
+q
+qTitle on this line
+\# ssssss
+<pre>aaaaaa</pre>
+<hr>
+]]></description><link>https://leonel.pages.dev/qqq.html</link>
+<guid>https://leonel.pages.dev/./qqq.html</guid>
+<dc:creator>leonel</dc:creator>
+<pubDate>Tue, 18 Mar 2025 10:32:12 +0100</pubDate></item>
+<item><title>
+Title on this line
+</title><description><![CDATA[
+
+<p>The rest of the text file is an <b>html</b> blog post. The process will continue as soon
+as you exit your editor.</p>
+
+<p>Tags: <a href='tag_keep-this-tag-format.html'>keep-this-tag-format</a>, <a href='tag_tags-are-optional.html'>tags-are-optional</a>, <a href='tag_example.html'>example</a></p>
+
+
+
+<img src="tard.jpg">
+<code>xxxxxxxx</code>
+
+
+
+
+
+<!-- text end -->
+]]></description><link>https://leonel.pages.dev/18650.html</link>
+<guid>https://leonel.pages.dev/./18650.html</guid>
+<dc:creator>lenoenel</dc:creator>
+<pubDate>Tue, 18 Mar 2025 10:32:12 +0100</pubDate></item>
 <item><title>
 kaka
 </title><description><![CDATA[
@@ -73,22 +171,7 @@ as you exit your editor.</p>
 ]]></description><link>https://leonel.pages.dev/25586.html</link>
 <guid>https://leonel.pages.dev/./25586.html</guid>
 <dc:creator>leonel</dc:creator>
-<pubDate>Sun, 16 Mar 2025 23:25:16 +0100</pubDate></item>
-<item><title>
-qqq
-</title><description><![CDATA[
-q
-
-q
-q
-qTitle on this line
-\# ssssss
-<pre>aaaaaa</pre>
-<hr>
-]]></description><link>https://leonel.pages.dev/qqq.html</link>
-<guid>https://leonel.pages.dev/./qqq.html</guid>
-<dc:creator>leonel</dc:creator>
-<pubDate>Sun, 16 Mar 2025 23:03:58 +0100</pubDate></item>
+<pubDate>Tue, 18 Mar 2025 10:32:12 +0100</pubDate></item>
 <item><title>
 222
 </title><description><![CDATA[
@@ -114,28 +197,5 @@ as you exit your editor.</p>
 ]]></description><link>https://leonel.pages.dev/29020.html</link>
 <guid>https://leonel.pages.dev/./29020.html</guid>
 <dc:creator>lenoenel</dc:creator>
-<pubDate>Sun, 16 Mar 2025 22:27:48 +0100</pubDate></item>
-<item><title>
-Title on this line
-</title><description><![CDATA[
-
-<p>The rest of the text file is an <b>html</b> blog post. The process will continue as soon
-as you exit your editor.</p>
-
-<p>Tags: <a href='tag_keep-this-tag-format.html'>keep-this-tag-format</a>, <a href='tag_tags-are-optional.html'>tags-are-optional</a>, <a href='tag_example.html'>example</a></p>
-
-
-
-<img src="tard.jpg">
-<code>xxxxxxxx</code>
-
-
-
-
-
-<!-- text end -->
-]]></description><link>https://leonel.pages.dev/18650.html</link>
-<guid>https://leonel.pages.dev/./18650.html</guid>
-<dc:creator>lenoenel</dc:creator>
-<pubDate>Sun, 16 Mar 2025 22:13:00 +0100</pubDate></item>
+<pubDate>Tue, 18 Mar 2025 10:32:12 +0100</pubDate></item>
 </channel></rss>
